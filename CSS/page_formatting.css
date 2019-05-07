@@ -1,0 +1,47 @@
+/*Main Body Section*/
+    .grid-container {
+        width: 100%;
+        display: inline-grid;
+        grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+        grid-template-rows: repeat(11, minmax(10px, max-content));
+    }
+
+    .opening {
+        grid-column: 2 / span 8;
+    }
+/*TOP NAVIGATION BAR*/
+    .topnav {
+        background-color: #0B0C10;
+        overflow: hidden;
+        opacity: 0.75;
+        position: absolute; top:20; left: 0;
+        z-index: 2;
+        width: 100%;
+    }
+    /*Style the links*/
+    .topnav a {
+        float: left;
+        color:  #e2fffe;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none; /*To remove into fonts*/
+        font-size: 17px; /*To remove into fonts*/
+        font-family: "Arial Narrow" ; /*To remove into fonts*/
+    }
+    .rightButton{
+        float: right;
+        overflow: hidden;
+        margin: 0px;
+        padding: 0px;
+    }
+    /*Change the color of links on hover*/
+    .topnav a:hover {
+        background-color: #1F2833;
+        color: #66FCF1;
+    }
+    /*Add a color to the active/current link*/
+    .topnav a.active {
+        background-color: #45A29E;
+        color: white;
+    }
+
