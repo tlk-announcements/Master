@@ -1,0 +1,26 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family:'Open Sans', sans-serif;
+    font-size: 16px;
+    color: #0B0C10;
+}
+
+h1, h2{
+    font-family:'Roboto', sans-serif;
+}
+
+h1{ /*For Main Header*/
+    font-size: 70px;
+    padding-bottom: 2%;
+    text-shadow: 2px 3px lightblue;
+}
+
+h2{
+    font-size: 40px;
+    text-shadow: 2px 3px lightblue;
+}
+
+h3{
+    font-size: 25px;
+}

@@ -6,9 +6,41 @@
         grid-template-rows: repeat(11, minmax(10px, max-content));
     }
 
-    .opening {
-        grid-column: 2 / span 8;
+    .header-l{
+        grid-column: 1 / span 9;
+        padding: 5%;
+        padding-top: 25%;
     }
+
+    .title{
+        grid-column: 2 / span 8;
+        padding: 5%;
+        text-align: center;
+    }
+
+    .text-box, .list, .update-bar{
+        margin: 10px;
+        padding: 10px;
+    }
+    
+    .text-box {
+        grid-column: 3 / span 6;   
+        text-align: center;
+        background: #45A29E;
+    }
+
+    .list {
+        grid-column: 3 / span 2;
+        grid-row: span 3;
+        background: #45A29E;
+    }
+
+    .update-bar{
+        grid-column: 5 / span 4;   
+        text-align: center;
+        background: #45A29E;
+    }
+        
 /*TOP NAVIGATION BAR*/
     .topnav {
         background-color: #0B0C10;
@@ -25,8 +57,6 @@
         text-align: center;
         padding: 14px 16px;
         text-decoration: none; /*To remove into fonts*/
-        font-size: 17px; /*To remove into fonts*/
-        font-family: "Arial Narrow" ; /*To remove into fonts*/
     }
     .rightButton{
         float: right;
