@@ -1,0 +1,69 @@
+body{
+    background-image: linear-gradient(to bottom left, #c31432,#240b36);
+}
+
+
+.grid_container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -110px;
+    margin-left: -200px;
+    width: 400px;
+    height: 220px;
+    /*The section below makes it a grid*/
+    display: inline-grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-auto-rows: minmax(10px, max-content);
+     /*The section below makes look good*/
+    background-color: whitesmoke;
+    border-radius: 20px;
+}
+
+.title, .email, .password, .login{
+    margin: 5%;
+}
+
+
+.title{
+    grid-column: 1 / span 4;
+    text-align: center;
+}
+
+.email{
+    grid-column: 1 / span 2;
+}
+
+.password{
+    grid-column: 3 / span 2;
+}
+
+.login{
+    grid-column: 1 / span 4;
+    margin: 5% auto;
+}
+
+.to_signup{
+    grid-column: 1 / span 4;
+    text-align: center;
+}
+
+    .to_signup a{
+        font-size: 13px;
+    }
+
+#btnLogin{
+    color: whitesmoke;
+    background-color: #240b36;
+    border: none;
+    height: 35px;
+    width: 60px;
+    cursor: pointer;
+    transition: 0.6s;
+}
+
+#btnLogin:hover{
+    -webkit-filter: opacity(.2);
+    border-radius: 10px;
+    filter: opacity(.7);
+}

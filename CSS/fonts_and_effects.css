@@ -24,3 +24,13 @@ h2{
 h3{
     font-size: 25px;
 }
+
+ul{
+    list-style-type: none;
+    padding: 10px;
+    font-size: 20px;
+}
+
+hr{
+    margin: 5px;
+}
