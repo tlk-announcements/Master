@@ -23,6 +23,15 @@
         background-size: 100% 100%;
     }
 
+    .header-3{
+        grid-column: 1 / span 10;
+        padding: 10%;
+        padding-top: 15%;
+        line-height: 100%;
+        text-align: center;
+        background-size: 100% 100%;
+    }
+
     .title{
         grid-column: 1 / span 10;
         padding: 5%;
@@ -35,6 +44,7 @@
     .text-box, .text-box-W, .list, .update-bar, .display-box-left, .display-box-center, .display-box-right, .left-line{
         margin: 10px;
         padding: 10px;
+        border-radius: 10px;
     }
     
     .text-box {
@@ -102,6 +112,7 @@
         position: fixed; top: 20; left: 0;
         width: 100%;
         transition: top 0.5s;
+        z-index: 2;
     }
     /*Style the links*/
     #topnav a {

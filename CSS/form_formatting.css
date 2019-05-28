@@ -7,10 +7,6 @@ body{
     position: absolute;
     top: 50%;
     left: 50%;
-    margin-top: -110px;
-    margin-left: -200px;
-    width: 400px;
-    height: 220px;
     /*The section below makes it a grid*/
     display: inline-grid;
     grid-template-columns: 25% 25% 25% 25%;
@@ -20,27 +16,25 @@ body{
     border-radius: 20px;
 }
 
-.title, .email, .password, .login{
-    margin: 5%;
-}
-
-
 .title{
     grid-column: 1 / span 4;
     text-align: center;
+    margin: 5%;
 }
 
 .email{
     grid-column: 1 / span 2;
+    margin: 3% auto;
 }
 
 .password{
     grid-column: 3 / span 2;
+    margin: 3% auto;
 }
 
 .login{
     grid-column: 1 / span 4;
-    margin: 5% auto;
+    margin: 4% auto;
 }
 
 .to_signup{
@@ -52,17 +46,24 @@ body{
         font-size: 13px;
     }
 
-#btnLogin{
+#btnLogin, #btnSignup{
     color: whitesmoke;
     background-color: #240b36;
     border: none;
     height: 35px;
-    width: 60px;
     cursor: pointer;
     transition: 0.6s;
 }
 
-#btnLogin:hover{
+#btnLogin{
+    width: 70px;
+}
+
+#btnSignup{
+    width: 90px;
+}
+
+#btnLogin:hover, #btnSignup:hover{
     -webkit-filter: opacity(.2);
     border-radius: 10px;
     filter: opacity(.7);
