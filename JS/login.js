@@ -29,41 +29,12 @@
         promise.catch(e => console.log(e.message));
     }); 
 
-    // Add signup event
-    btnSignUp.addEventListener('click', e => {
-         // Get email and pass
-         // TODO: Check for real emails 
-         const email = txtEmail.value;
-         const pass = txtPassword.value;
-         const confirmpass = txtConfirmPassword.value;
-         const code = txtCode.value;
-         const auth = firebase.auth();
-         //Sign in
-         if (pass != confirmpass) {
-            alert("Passwords are not the same. Please re-enter the same password in both. Passwords must be at least 6 characters long.");
-        }else if (code != "d7") {
-            alert("Wrong code. Try again.")
-        }else if(pass.length < 6 || confirmpass.length < 6){
-            alert("Passwords must be at least 6 characters long.");
-        }else {
-            const promise = auth.createUserWithEmailAndPassword(email,pass);
-            promise.catch(e => console.log(e.message));
-        } 
-      
-    });
-
-    btnLogout.addEventListener('click', e => {
-        firebase.auth().signOut();
-    });
-
     // Add a realtime listener
     firebase.auth().onAuthStateChanged(firebaseUser => {
         if (firebaseUser) {
-            console.log(firebaseUser);
-            btnLogout.classList.remove('hide');
+            console.log('logged in');
         }else{
             console.log('not logged in');
-            btnLogout.classList.add('hide');
         }
 
     }); 

@@ -2,11 +2,11 @@
 
 <head>
     <title>TLK Announcements</title>  <!--The little thing in the tab-->
-     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet"> 
     <link rel="stylesheet" type="text/css" href="CSS/fonts_and_effects.css">
     <link rel="stylesheet" type="text/css" href="CSS/page_formatting.css">
-    <script src="JS/animations.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase.js"></script>
 </head> 
 
 <body>
@@ -15,7 +15,7 @@
         <a href="HTML/clubs+teams.html">Clubs + Teams</a>
         <a href="HTML/daily-news.html">Daily News</a>
         <a href="HTML/about-us.html">About Us</a>
-        <div class = "rightButton"><a href="HTML/sign-in.html">Sign In</a></div>
+        <div class = "rightButton"><a id="btnSN" href="HTML/sign-in.html"></a></div>
     </div>
     
     <div class = "grid-container">
@@ -36,25 +36,25 @@
         <div class = "list">
             <h3-1>Clubs and Teams</h3-1>
             <ul>
-                <li>General Announcements</li>
+                <li><a href="HTML/CP/general_ann.html" class="blfo" target = "_blank">General Announcements</a></li>
                 <hr>
-                <li>SHSM</li>
-                <li>Leadership</li>
-                <li>IBT</li>
-                <li>GDM</li>
+                <li><a href="HTML/CP/shsm.html" class="blfo" target = "_blank">SHSM</a></li>
+                <li><a href="HTML/CP/leadership.html" class="blfo" target = "_blank">Leadership</a></li>
+                <li><a href="HTML/CP/ibt.html" class="blfo" target = "_blank">IBT</a></li>
+                <li><a href="HTML/CP/gdm.html"  class="blfo" target = "_blank">GDM</a></li>
                 <hr>
-                <li>SAC</li>
-                <li>DECA</li>
-                <li>Robotics</li>
-                <li>Computer Science</li>
+                <li><a href="HTML/CP/sac.html" class="blfo" target = "_blank">SAC</a></li>
+                <li><a href="HTML/CP/deca.html" class="blfo" target = "_blank">DECA</a></li>
+                <li><a href="HTML/CP/robotics.html" class="blfo" target = "_blank">Robotics</a></li>
+                <li><a href="HTML/CP/comp_sci.html" class="blfo" target = "_blank">Computer Science</a></li>
                 <hr>
-                <li>Basketball</li>
-                <li>Soccer</li>
-                <li>Tennis</li>
-                <li>Badminton</li>
-                <li>Cricket</li>
-                <li>Track</li>
-                <li>Ultimate Frizzbe</li>
+                <li><a href="HTML/CP/basketball.html" class="blfo" target = "_blank">Basketball</a></li>
+                <li><a href="HTML/CP/soccer.html" class="blfo" target = "_blank">Soccer</a></li>
+                <li><a href="HTML/CP/tennis.html" class="blfo" target = "_blank">Tennis</a></li>
+                <li><a href="HTML/CP/badminton.html" class="blfo" target = "_blank">Badminton</a></li>
+                <li><a href="HTML/CP/cricket.html" class="blfo" target = "_blank">Cricket</a></li>
+                <li><a href="HTML/CP/track.html" class="blfo" target = "_blank">Track</a></li>
+                <li><a href="HTML/CP/ultimate..html" class="blfo" target = "_blank">Ultimate Frizzbe</a></li>
                 <hr>
             </ul>
         </div>
@@ -100,7 +100,7 @@
                 could provide helpful insights on how to face the world outside of school. 
             </div>
 
-            <a class="display-box-left" href="http://www.electronicinfo.ca/" target="_blank">
+            <a class="display-box-left" href="http://www.electronicinfo.ca/" target="_blank" >
                 <h3-1>Explore</h3-1>
             </a>
 
@@ -108,7 +108,7 @@
                 <h3-1>Learn</h3-1>
             </a>
 
-            <a class="display-box-right" href="https://www.sparkontario.ca/" target="_blank">
+            <a class="display-box-right" class="btn-5" href="https://www.sparkontario.ca/" target="_blank">
                 <h3-1>Connect</h3-1>
             </a>
 
@@ -119,6 +119,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="JS/animations.js"></script>
 </body>
 
 </html>
