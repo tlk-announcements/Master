@@ -2,10 +2,12 @@
     
 <head>
     <title>TLK - Enter Info</title>  <!--The little thing in the tab-->
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet"> 
     <link rel="stylesheet" type="text/css" href="../CSS/fonts_and_effects.css">
     <link rel="stylesheet" type="text/css" href="../CSS/form_formatting.css">
+
     <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase.js"></script>
 </head>
 
@@ -14,10 +16,39 @@
         <img class="return_home" src="../Images/back-button.png" alt="Return Home">
     </a>
     
-    <div class="grid_container" style="margin-top: -110px; margin-left: -250px; width: 500px; height: 220px;">
+    <div class="grid_container" style="margin-top: -150px; margin-left: -300px; width: 600px; height: 300px;">
         <div class="title"><h3>Enter Info</h3></div>
+        <div class="left_half"> Date of Event <br><input  type = 'date' id = 'setChild' ></div>
+        <textarea placeholder="Enter Announcement..." class="enter_info" id = 'mainText' cols="40" rows="5"></textarea>
+        
+        <div class="left_half">
+            Club or Team <br>
+            <form>
+                <select id = "list_of_clubs">
+                    <option id = 'general_ann'>General Ann</option>
+                    <option id = 'shsm'>SHSM</option>
+                    <option id = 'leadership'>Leadership</option>
+                    <option id = 'ibt'>IBT</option>
+                    <option id = 'gdm'>GDM</option>
+                    <option id = 'sac'>SAC</option>
+                    <option id = 'deca'>DECA</option>
+                    <option id = 'robotics'>Robotics</option>
+                    <option id = 'comp-sci'>Computer Science</option>
+                    <option id = 'basketball'>Basketball</option>
+                    <option id = 'soccer'>Soccer</option>
+                    <option id = 'tennis'>Tennis</option>
+                    <option id = 'badminton'>Badminton</option>
+                    <option id = 'cricket'>Cricket</option>
+                    <option id = 'track'>Track</option>
+                    <option id = 'ultimate'>Ultimate</option>
+                </select>
+            </form>
+        </div>
+
+        <button class="login" id="btnInput" onclick="upload_to_FB()">Submit</button>
         
     </div>
-    <script src=""></script>
+    <script src="../JS/data_enter.js"></script>
 </body>
+
 </html>

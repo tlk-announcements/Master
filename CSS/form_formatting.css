@@ -26,6 +26,12 @@ body{
     margin: 3% auto;
 }
 
+.left_half{ /*for signup page*/
+    grid-column: 1 / span 2;
+    margin: 3% auto;
+    text-align: center;
+}
+
 .password{
     grid-column: 3 / span 2;
     margin: 3% auto;
@@ -45,7 +51,19 @@ body{
         font-size: 13px;
     }
 
-#btnLogin, #btnSignup{
+.enter_info{
+    grid-column: 3 / span 2;
+    grid-row: span 2;
+    margin: 1% 5%;
+    border-radius: 5px;
+}
+
+#setChild{
+    border-radius: 5px;
+}
+
+
+#btnLogin, #btnSignup, #btnInput{
     color: whitesmoke;
     background-color: #240b36;
     border: none;
@@ -62,7 +80,11 @@ body{
     width: 90px;
 }
 
-#btnLogin:hover, #btnSignup:hover{
+#btnInput{
+    width: 70px;
+}
+
+#btnLogin:hover, #btnSignup:hover, #btnInput:hover{
     -webkit-filter: opacity(.2);
     border-radius: 10px;
     filter: opacity(.7);
