@@ -26,6 +26,7 @@ function checkUser(){
   
 
   var changeText = document.getElementById("btnSN");
+  var otherThing = document.getElementById("submit_boi");
   
   firebase.auth().onAuthStateChanged(firebaseUser => {
     if (firebaseUser) {
@@ -37,6 +38,11 @@ function checkUser(){
     }else{
         changeText.innerHTML = "Sign In";
         console.log('not logged in');
+        if (document.title == "TLK - Clubs & Teams"){
+          otherThing.innerHTML = "Log In To Submit Announcement";
+          otherThing.href = " ";
+        }
+        
     }
 }); 
   

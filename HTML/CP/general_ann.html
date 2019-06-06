@@ -5,30 +5,36 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet"> 
     <link rel="stylesheet" type="text/css" href="../../CSS/fonts_and_effects.css">
     <link rel="stylesheet" type="text/css" href="../../CSS/page_formatting.css">
+
+    <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase.js"></script>
 </head> 
 
-
-<body>
+<body onload="retrieve_from_FB()">
     
     <div class = "grid-container">
         <a href="../clubs+teams.html">
             <img class="return_home" src="../../Images/back-button.png" alt="Go Back">
         </a>
 
-        <div class = "header-3" style = "background-image: url('../Images/TLK - School Enterance.jpg');  background-attachment: fixed;">
+        <div class = "header-3">
             <h1-1>General Announcements</h1-1>
         </div>
 
-        <div class="text-box-W">
+        <div class="text-box-W" >
             Hoc probabiliter est vere frigus clava, sed non scientia, aut up to write a tempore blurb. 
             Quoque latine forma realiter frigus quod Google facit illud. Ego iustus opus fac illud magis 
             nunc id blurb spectat vere delicatus, et plenus.
+        </div>
+
+        <div class="text-box" id="output" accesskey="General Ann">
+            
         </div>
 
         <div class="footer">
             This is the footer!
         </div>
     </div>
+    <script src="../../JS/data_enter.js"></script>
 </body>
 
 </html>
