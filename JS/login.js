@@ -27,6 +27,7 @@
         //Sign in
         const promise = auth.signInWithEmailAndPassword(email,pass);
         promise.catch(e => console.log(e.message));
+        alert("You're logged in!");
     }); 
 
     // Add a realtime listener

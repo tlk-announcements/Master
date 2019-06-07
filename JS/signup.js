@@ -38,6 +38,7 @@
         }else {
             const promise = auth.createUserWithEmailAndPassword(email,pass);
             promise.catch(e => console.log(e.message));
+            alert("You now have an account. Welcome!");
         } 
       
     });

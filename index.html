@@ -9,7 +9,7 @@
     <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase.js"></script>
 </head> 
 
-<body>
+<body onload="progress()">
     <div id="topnav">
         <a class="active" href="index.html">Home</a>
         <a href="HTML/clubs+teams.html">Clubs + Teams</a>
@@ -19,7 +19,7 @@
     </div>
     
     <div class = "grid-container">
-        <div class = "header-l" style = "background-image: url('Images/tlk-enterance.jpg');  background-attachment: fixed; filter: brightness(75%);">
+        <div class = "header-l" style = "background-image: url('Images/tlk-enterance.JPG');  background-attachment: fixed; filter: brightness(75%);">
             <h1-1>TLK <br> Announcements</h1-1>
         </div>
 
@@ -37,17 +37,17 @@
             <h3-1>Clubs and Teams</h3-1>
             <ul>
                 <li><a href="HTML/CP/general_ann.html" class="blfo" >General Announcements</a></li>
-                <hr style="border-color: rgb(221, 58, 46)">
+                <hr style="border-color: rgb(238, 216, 16)">
                 <li><a href="HTML/CP/shsm.html" class="blfo" >SHSM</a></li>
                 <li><a href="HTML/CP/leadership.html" class="blfo" >Leadership</a></li>
                 <li><a href="HTML/CP/ibt.html" class="blfo" >IBT</a></li>
                 <li><a href="HTML/CP/gdm.html"  class="blfo" >GDM</a></li>
-                <hr style="border-color: rgb(221, 58, 46)">
+                <hr style="border-color: rgb(238, 216, 16)">
                 <li><a href="HTML/CP/sac.html" class="blfo" >SAC</a></li>
                 <li><a href="HTML/CP/deca.html" class="blfo" >DECA</a></li>
                 <li><a href="HTML/CP/robotics.html" class="blfo" >Robotics</a></li>
                 <li><a href="HTML/CP/comp_sci.html" class="blfo" >Computer Science</a></li>
-                <hr style="border-color: rgb(221, 58, 46)">
+                <hr style="border-color: rgb(238, 216, 16)">
                 <li><a href="HTML/CP/basketball.html" class="blfo" >Basketball</a></li>
                 <li><a href="HTML/CP/soccer.html" class="blfo" >Soccer</a></li>
                 <li><a href="HTML/CP/tennis.html" class="blfo" >Tennis</a></li>
@@ -55,7 +55,7 @@
                 <li><a href="HTML/CP/cricket.html" class="blfo" >Cricket</a></li>
                 <li><a href="HTML/CP/track.html" class="blfo" >Track</a></li>
                 <li><a href="HTML/CP/ultimate..html" class="blfo" >Ultimate Frizzbe</a></li>
-                <hr style="border-color: rgb(221, 58, 46)">
+                <hr style="border-color: rgb(238, 216, 16)">
             </ul>
         </div>
 
@@ -86,8 +86,10 @@
                 page for you on the site.  
             </div>
             
-            <a style="background: none; line-height: 185px; text-align: center;" href="HTML/sign-up.html" class="update-bar">
-                <h3-1-1>Go to Sign Up Page!</h3-1-1>
+            <a style="background: none; line-height: 185px; text-align: center;" href="HTML/sign-up.html" class="update-bar" id="linky">
+                <hr class="style1">
+                <h3-1-1 >Go to Sign Up Page!</h3-1-1>
+                <hr class="style2">
             </a>
 
         <div class="title" style="background-image: url('Images/city1.jpg');">
@@ -113,7 +115,19 @@
             </a>
 
         <div class="footer">
-            This is the footer!
+            <hr style="border-color: rgb(238, 216, 16); border-width: 2px;">
+            
+            <div id="per_day">You are --% through the day</div>
+
+            <div class="progress">
+                <div id="day-progress" class="progress-bar progress-bar-striped progress-bar-animated bg-warning" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+
+            <div id="per_week">You are --% through the week</div>
+
+            <div class="progress">
+                <div id="week-progress" class="progress-bar progress-bar-striped progress-bar-animated bg-warning" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
                 
         </div>
     </div>
@@ -121,6 +135,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="JS/animations.js"></script>
+    <script src="JS/progress_bar.js"></script>
 </body>
 
 </html>

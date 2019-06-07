@@ -10,7 +10,7 @@
 </head> 
 
 
-<body>
+<body onload="progress()">
     <div id="topnav">
         <a href="../index.html">Home</a>
         <a class="active" href="clubs+teams.html">Clubs + Teams</a>
@@ -20,7 +20,7 @@
     </div>
     
     <div class = "grid-container">
-        <div class = "header-2" style = "background-image: url('../Images/tlk-baller.jpg');">
+        <div class = "header-2" style = "background-image: url('../Images/tlk-baller.JPG');">
             <h1-1>Clubs + Teams</h1-1>
         </div>
 
@@ -35,11 +35,11 @@
         </a>
 
         <!-- ---------------------------General announcements ------------------------------->
-        <div class="line-div-left"><hr style="border-color: rgb(221, 58, 46); border-width: 4px;"></div>
+        <div class="line-div-left"><hr style="border-color: rgb(238, 216, 16); border-width: 4px;"></div>
         <div class="title-2"><h2-1>School Wide</h2-1></div>
-        <div class="line-div-right"><hr style="border-color: rgb(221, 58, 46); border-width: 4px;"></div>
+        <div class="line-div-right"><hr style="border-color: rgb(238, 216, 16); border-width: 4px;"></div>
 
-            <a href="CP/general_ann.html" class="display-box-left" style="background-image: url('../Images/tlk-flag.jpg'); ">
+            <a href="CP/general_ann.html" class="display-box-left" style="background-image: url('../Images/tlk-flag.JPG'); ">
                 <h3-1-1>General Ann.</h3-1-1>
             </a>
             
@@ -51,9 +51,9 @@
             </div>
         <!-- --------------------------- Programs ------------------------------->
             
-        <div class="line-div-left"><hr style="border-color: rgb(221, 58, 46); border-width: 4px;"></div>
+        <div class="line-div-left"><hr style="border-color: rgb(238, 216, 16); border-width: 4px;"></div>
         <div class="title-2"><h2-1>Programs</h2-1></div>
-        <div class="line-div-right"><hr style="border-color: rgb(221, 58, 46); border-width: 4px;"></div>
+        <div class="line-div-right"><hr style="border-color: rgb(238, 216, 16); border-width: 4px;"></div>
 
             <a href="CP/shsm.html" class="display-box-left" style="background-image: url('../Images/ct-shsm.jpg'); ">
                 <h3-1-1>SHSM</h3-1-1>
@@ -87,7 +87,7 @@
                 dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit. 
             </div>
 
-            <a href="CP/gdm.html" class="display-box-left" style="background-image: url('../Images/tlk-stairs.jpg'); ">
+            <a href="CP/gdm.html" class="display-box-left" style="background-image: url('../Images/tlk-stairs.JPG'); ">
                 <h3-1-1>GDM</h3-1-1>
             </a>
 
@@ -98,9 +98,9 @@
                 te: et ne quis sciat.
             </div>
         <!-- --------------------------- Clubs ------------------------------->
-        <div class="line-div-left"><hr style="border-color: rgb(221, 58, 46); border-width: 4px;"></div>
+        <div class="line-div-left"><hr style="border-color: rgb(238, 216, 16); border-width: 4px;"></div>
         <div class="title-2"><h2-1>Clubs</h2-1></div>
-        <div class="line-div-right"><hr style="border-color: rgb(221, 58, 46); border-width: 4px;"></div>
+        <div class="line-div-right"><hr style="border-color: rgb(238, 216, 16); border-width: 4px;"></div>
 
 
             <a href="CP/sac.html" class="display-box-left" style="background-image: url('../Images/ct-sac.jpg');">
@@ -148,9 +148,9 @@
             </div>
 
        <!-- --------------------------- Teams ------------------------------->
-       <div class="line-div-left"><hr style="border-color: rgb(221, 58, 46); border-width: 4px;"></div>
+       <div class="line-div-left"><hr style="border-color: rgb(238, 216, 16); border-width: 4px;"></div>
        <div class="title-2"><h2-1>Teams</h2-1></div>
-       <div class="line-div-right"><hr style="border-color: rgb(221, 58, 46); border-width: 4px;"></div>
+       <div class="line-div-right"><hr style="border-color: rgb(238, 216, 16); border-width: 4px;"></div>
 
             <a href="CP/basketball.html" class="display-box-left" style="background-image: url('../Images/ct-basketball.jpg'); ">
                 <h3-1-1>Basketball</h3-1-1>
@@ -228,10 +228,24 @@
             </div>
 
         <div class="footer">
-            This is the footer!
+                <hr style="border-color: rgb(238, 216, 16); border-width: 2px;">
+                
+                <div id="per_day">You are --% through the day</div>
+    
+                <div class="progress">
+                    <div id="day-progress" class="progress-bar progress-bar-striped progress-bar-animated bg-warning" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+                </div>
+    
+                <div id="per_week">You are --% through the week</div>
+    
+                <div class="progress">
+                    <div id="week-progress" class="progress-bar progress-bar-striped progress-bar-animated bg-warning" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+                </div>
+                    
         </div>
     </div>
     <script src="../JS/animations.js"></script>
+    <script src="../JS/progress_bar.js"></script>
 </body>
 
 </html>

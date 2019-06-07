@@ -9,7 +9,7 @@
     <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase.js"></script>
 </head> 
 
-<body>
+<body onload="progress()">
     <div id="topnav">
         <a href="../index.html">Home</a>
         <a href="clubs+teams.html">Clubs + Teams</a>
@@ -29,9 +29,9 @@
             below.
         </div>
 
-        <div class="line-div-left"><hr style="border-color: rgb(221, 58, 46); border-width: 4px;"></div>
+        <div class="line-div-left"><hr style="border-color: rgb(238, 216, 16); border-width: 4px;"></div>
         <div class="title-2"><h2-1>SAC Execs</h2-1></div>
-        <div class="line-div-right"><hr style="border-color: rgb(221, 58, 46); border-width: 4px;"></div>
+        <div class="line-div-right"><hr style="border-color: rgb(238, 216, 16); border-width: 4px;"></div>
 
         <div class="info-box-left" style="">
             <img src="../Images/au-profile.jpg" alt="Profile" class="sq-image"> <br>
@@ -54,7 +54,7 @@
             facta miles et in loco posuit quæ latine. 
         </div>
 
-        <div class="title-2"><h2-1><hr style="border-color: rgb(221, 58, 46); border-width: 4px; margin-top: 55%;"></h2-1></div>
+        <div class="title-2"><h2-1><hr style="border-color: rgb(238, 216, 16); border-width: 4px; margin-top: 55%;"></h2-1></div>
 
         <div class="info-box-right">
             <img src="../Images/au-profile.jpg" alt="Profile" class="sq-image"> <br>
@@ -70,7 +70,7 @@
             facta miles et in loco posuit quæ latine. 
         </div>
 
-        <div class="title-2"><h2-1><hr style="border-color: rgb(221, 58, 46); border-width: 4px; margin-top: 55%;"></h2-1></div>
+        <div class="title-2"><h2-1><hr style="border-color: rgb(238, 216, 16); border-width: 4px; margin-top: 55%;"></h2-1></div>
 
         <div class="info-box-right">
             <img src="../Images/au-profile.jpg" alt="Profile" class="sq-image"> <br>
@@ -136,7 +136,7 @@
             facta miles et in loco posuit quæ latine. 
         </div>
 
-        <div class="title-2"><h2-1><hr style="border-color: rgb(221, 58, 46); border-width: 4px; margin-top: 55%;"></h2-1></div>
+        <div class="title-2"><h2-1><hr style="border-color: rgb(238, 216, 16); border-width: 4px; margin-top: 55%;"></h2-1></div>
 
         <div class="info-box-right">
             <img src="../Images/au-profile.jpg" alt="Profile" class="sq-image"> <br>
@@ -145,9 +145,9 @@
             facta miles et in loco posuit quæ latine. 
         </div>
 
-        <div class="line-div-left"><hr style="border-color: rgb(221, 58, 46); border-width: 4px;"></div>
+        <div class="line-div-left"><hr style="border-color: rgb(238, 216, 16); border-width: 4px;"></div>
         <div class="title-2"><h2-1>Site Creators</h2-1></div>
-        <div class="line-div-right"><hr style="border-color: rgb(221, 58, 46); border-width: 4px;"></div>
+        <div class="line-div-right"><hr style="border-color: rgb(238, 216, 16); border-width: 4px;"></div>
 
         <div class="info-box-left">
             <img src="../Images/au-profile.jpg" alt="Profile" class="sq-image"> <br>
@@ -171,10 +171,24 @@
         </div>
 
         <div class="footer">
-            This is the footer!
+            <hr style="border-color: rgb(238, 216, 16); border-width: 2px;">
+            
+            <div id="per_day">You are --% through the day</div>
+
+            <div class="progress">
+                <div id="day-progress" class="progress-bar progress-bar-striped progress-bar-animated bg-warning" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+
+            <div id="per_week">You are --% through the week</div>
+
+            <div class="progress">
+                <div id="week-progress" class="progress-bar progress-bar-striped progress-bar-animated bg-warning" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+                
         </div>
     </div>
     <script src="../JS/animations.js"></script>
+    <script src="../JS/progress_bar.js"></script>
 </body>
 
 </html>

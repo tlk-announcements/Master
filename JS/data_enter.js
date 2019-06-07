@@ -69,8 +69,7 @@ function dates_for_t(){
 
 function just_today(){
     dates_for_t();
-    console.log(acc_mon, acc_day);
-    var everything = ["General Ann", "IBT", "GDM", "Leadership", "SHSM", "DECA", "Robotics"];
+    var everything = ["General Ann", "IBT", "GDM", "Leadership", "SHSM", "DECA", "Robotics", "Comp Sci", ""];
     for (x in everything){
         // Retrieving each announcement for the indicated club
         var firebaseshow = firebase.database().ref().child(everything[x]);
@@ -80,6 +79,9 @@ function just_today(){
             ev_day = ev_date[2];
 
             if ((ev_mon == acc_mon) && (ev_day == acc_day)){
+                if (document.getElementById("output").innerHTML == "No Announcements Today!"){
+                    document.getElementById("output").innerHTML = " ";
+                }
                 var para = document.createElement("p");
                 var node = document.createTextNode(String(snap.val()));
                 para.appendChild(node);
