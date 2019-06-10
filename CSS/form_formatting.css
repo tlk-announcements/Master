@@ -1,5 +1,5 @@
 body{
-    background-image: linear-gradient(to bottom left, #c31432,#240b36);
+    background-image: linear-gradient(to bottom left, #c31489,#240b36);
 }
 
 .grid_container{
@@ -13,6 +13,8 @@ body{
      /*The section below makes look good*/
     background-color: whitesmoke;
     border-radius: 20px;
+    border-color: rgb(238, 216, 16);
+    box-shadow: 0 0 100px #18001b;
 }
 
 .title{
@@ -65,10 +67,11 @@ body{
 
 #btnLogin, #btnSignup, #btnInput{
     color: whitesmoke;
-    background-color: #240b36;
+    background-color: rgb(233, 176, 21);
     border: none;
     height: 35px;
     cursor: pointer;
+    border-radius: 5px;
     transition: 0.6s;
 }
 
@@ -85,7 +88,6 @@ body{
 }
 
 #btnLogin:hover, #btnSignup:hover, #btnInput:hover{
-    -webkit-filter: opacity(.2);
-    border-radius: 10px;
-    filter: opacity(.7);
+    border-radius: 15px;
+    filter: opacity(.6);
 }

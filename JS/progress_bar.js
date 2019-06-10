@@ -21,28 +21,30 @@ function progress() {
                 day_bar.style = "width: 100%";
                 text_day.innerHTML = "You're done the school day!"
                 week_bar.style = "width: " + String(Math.round((day/5) * 100)) + "%;";
-                text_week.innerHTML = "You are " + String(Math.round((day/5) * 100)) + "% through the school week";
+                text_week.innerHTML = "You are " + String(Math.round((day/5) * 100)) + "% through the school week.";
 
             } else if ((new Date().getHours() == 8) && (new Date().getMinutes() < 20)){
                 day_bar.style = "width: 0%";
                 text_day.innerHTML = "Get ready to start the school day"
                 week_bar.style = "width: " + String(Math.round(((day-1)/5) * 100)) + "%;";
-                text_week.innerHTML = "You are " + String(Math.round(((day-1)/5) * 100)) + "% through the school week";
+                text_week.innerHTML = "You are " + String(Math.round(((day-1)/5) * 100)) + "% through the school week.";
 
             } else{
-                var de_time = ((new Date().getHours() - 8) * 60) + new Date().getMinutes();
-                var precent_don = Math.round((de_time / 380) * 100);
+                var de_time = ((new Date().getHours() - 8) * 60) + new Date().getMinutes() - 25;
+                var precent_don = Math.round((de_time / 371) * 100);
+                var dec_don = de_time / 400;
                 day_bar.style = "width: " + precent_don +"%;"
                 text_day.innerHTML = "You are " + String(precent_don) + "% done the school day."
-                week_bar.style = "width: " + String(Math.round((day/5) * 100)) + "%;";
-                text_week.innerHTML = "You are " + String(Math.round((day/5) * 100)) + "% through the school week";
+
+                week_bar.style = "width: " + String(Math.round(((day-(1-dec_don))/5) * 100)) + "%;";
+                text_week.innerHTML = "You are " + String(Math.round(((day-(1-dec_don))/5) * 100)) + "% through the school week.";
             }
         }else {
             day_bar.style = "width: 100%";
             text_day.innerHTML = "You're done the school day!";
             console.log("done");
             week_bar.style = "width: " + String(Math.round((day/5) * 100)) + "%;";
-            text_week.innerHTML = "You are " + String(Math.round((day/5) * 100)) + "% through the school week";
+            text_week.innerHTML = "You are " + String(Math.round((day/5) * 100)) + "% through the school week.";
         }
     }
 

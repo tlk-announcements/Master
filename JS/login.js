@@ -27,13 +27,13 @@
         //Sign in
         const promise = auth.signInWithEmailAndPassword(email,pass);
         promise.catch(e => console.log(e.message));
-        alert("You're logged in!");
     }); 
 
     // Add a realtime listener
     firebase.auth().onAuthStateChanged(firebaseUser => {
         if (firebaseUser) {
             console.log('logged in');
+            alert("You're logged in!");
         }else{
             console.log('not logged in');
         }

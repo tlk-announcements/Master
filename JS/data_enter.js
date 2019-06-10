@@ -18,17 +18,26 @@ var acc_day = "";
 var acc_mon = "";
 var divider = " ----- "
 
-function upload_to_FB(){
+function initialize(){
     firebase.initializeApp(firebaseConfig);
+}
+
+function upload_to_FB(){
     var mainText = document.getElementById('mainText');
     var setChild = document.getElementById('setChild');
     selecting_a_club = document.getElementById('list_of_clubs').value;
-    var firebaseRef = firebase.database().ref().child(selecting_a_club);
-    var child = setChild.value;
-    var messageText =  mainText.value;
-    firebaseRef.child(child).set(messageText);
-    alert("Your announcement has been recived");
-    mainText.value = "";
+    if (mainText.value.length < 10 || setChild.value.length == 0 || !mainText.value.includes(" ")){
+        alert("Please enter a proper message, date, and club before submitting");
+    } else if (mainText.value.includes("fuck") || mainText.value.includes("unicorn") || mainText.value.includes("shit") || mainText.value.includes("bitch")){
+        alert("Please remove explisit content from post.");
+    } else {
+        var firebaseRef = firebase.database().ref().child(selecting_a_club);
+        var child = setChild.value;
+        var messageText =  mainText.value;
+        firebaseRef.child(child).set(messageText);
+        alert("Your announcement has been recived");
+        mainText.value = "";
+    }
 
 }
 
@@ -40,12 +49,14 @@ function retrieve_from_FB(){
     firebaseshow.on("child_added", snap =>{
     console.log(snap.key,snap.val());
     // ---------------------------------------- added -----------------------------------------------
-    var para = document.createElement("p");
-    var node = document.createTextNode(String(snap.key) + divider + String(snap.val()));
-    para.appendChild(node);
+    if (snap.key != "test"){
+        var para = document.createElement("p");
+        var node = document.createTextNode(String(snap.key) + divider + String(snap.val()));
+        para.appendChild(node);
 
-    var element = document.getElementById("output");
-    element.appendChild(para);
+        var element = document.getElementById("output");
+        element.appendChild(para);
+    }
 
  }); 
 }

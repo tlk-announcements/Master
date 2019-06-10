@@ -11,7 +11,7 @@ if (new Date().getMonth > 8){
 var year = new Date().getFullYear();
 
 // Set the date we're counting down to
-var countDownDate = new Date(grad_year, 5, 28, 14, 36, 0, 0).getTime();
+var countDownDate = new Date(grad_year, 5, 27, 14, 36, 0, 0).getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {

@@ -2,13 +2,14 @@
     
 <head>
     <title>TLK - Soccer</title>  <!--The little thing in the tab-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet"> 
     <link rel="stylesheet" type="text/css" href="../../CSS/fonts_and_effects.css">
     <link rel="stylesheet" type="text/css" href="../../CSS/page_formatting.css">
 </head> 
 
 
-<body>
+<body onload="progress()">
     
     <div class = "grid-container">
         <a href="../clubs+teams.html">
@@ -25,10 +26,31 @@
             nunc id blurb spectat vere delicatus, et plenus.
         </div>
 
+        <div class="text-box" id="output" accesskey=""></div>
+
         <div class="footer">
-            This is the footer!
+            <hr style="border-color: rgb(238, 216, 16); border-width: 2px;">
+            
+            <div id="per_day">You are --% through the day</div>
+
+            <div class="progress">
+                <div id="day-progress" class="progress-bar progress-bar-striped progress-bar-animated bg-warning" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+
+            <div id="per_week">You are --% through the week</div>
+
+            <div class="progress">
+                <div id="week-progress" class="progress-bar progress-bar-striped progress-bar-animated bg-warning" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+            
+            <a class="help-link" href="http://schools.peelschools.org/sec/tlkennedy/Pages/default.aspx" target="_blank">Looking for the official school site? Click Here</a>
+
         </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="../../JS/progress_bar.js"></script>
 </body>
 
 </html>
